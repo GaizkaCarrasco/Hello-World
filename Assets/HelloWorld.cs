@@ -10,7 +10,7 @@ public class HelloWorld : MonoBehaviour
     void Start()
     {
         player = new Player("Alfredo");
-        enemy = new Enemy("Roberto");
+        enemy = new Enemy("Rigoberto");
     }
 
     // Update is called once per frame
