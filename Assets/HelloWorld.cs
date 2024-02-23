@@ -9,7 +9,7 @@ public class HelloWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = new Player("Alfredo");
+        player = new Player("Alonso");
         enemy = new Enemy("Rigoberto");
     }
 
