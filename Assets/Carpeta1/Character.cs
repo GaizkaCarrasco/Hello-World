@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character
+public abstract class Character
 {
     public string name;
-    private int healthPoint = 1;
+    private int healthPoint { get; set; } = 10;
 
    public Character(string s)
     {
@@ -18,8 +18,13 @@ public class Character
         Debug.Log("Destroyed");
     }
 
-    public int getHealthPoint()
+    //public int getHealthPoint()
+    //{
+    //    return healthPoint;
+    //}
+
+    public void TakeDamage()
     {
-        return healthPoint;
+        this.healthPoint -= 1;
     }
 }

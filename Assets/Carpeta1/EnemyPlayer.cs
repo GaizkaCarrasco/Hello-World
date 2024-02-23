@@ -6,7 +6,7 @@ public class Enemy : Character
 {
     public Enemy(string s) : base(s)
     {
-        
+       
     }
 }
 
