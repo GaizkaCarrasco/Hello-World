@@ -4,13 +4,12 @@ using UnityEngine;
 
 public abstract class Character
 {
-    public string name;
-    private int healthPoint { get; set; } = 10;
 
-   public Character(string s)
+    public string name;
+    private int healthPoints = 10;
+    public Character(string name)
     {
-        this.name = s;
-        Debug.Log("Hola soy" + name + "y tengo " + healthPoint + "puntos de vida");
+        this.name = name;
     }
 
     ~Character()
@@ -18,13 +17,9 @@ public abstract class Character
         Debug.Log("Destroyed");
     }
 
-    //public int getHealthPoint()
-    //{
-    //    return healthPoint;
-    //}
+    public int HealthPoints { get => healthPoints; set => healthPoints = value; }
 
-    public void TakeDamage()
-    {
-        this.healthPoint -= 1;
-    }
+    public abstract void takeDamage();
+
+
 }
