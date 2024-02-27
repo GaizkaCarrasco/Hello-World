@@ -8,18 +8,33 @@ namespace HelloWorldCarpeta1
     {
         Enemy enemy;
         Player player;
-        // Start is called before the first frame update
         void Start()
         {
-            player = new Player("Alonso");
-            enemy = new Enemy("Rigoberto");
+            enemy = new Enemy("Ronaldo");
+            player = new Player("Messi");
+            Debug.Log("Hello World");
+            Debug.Log("Bye World");
         }
 
-        // Update is called once per frame
+
         void Update()
         {
-            Debug.Log("Nombre: " + enemy.name + ". Vida" + enemy.getHealthPoint());
-            Debug.Log("Soy Hello World de la carpeta 1");
+            Debug.Log("Nombre: " + enemy.name + ". Vida: " + enemy.HealthPoints);
+            Debug.Log("Nombre: " + player.name + ". Vida: " + player.HealthPoints);
+            if (player.HealthPoints != 0)
+            {
+                player.takeDamage();
+            }
+
+            if (enemy.HealthPoints != 0)
+            {
+                enemy.takeDamage();
+            }
+            else
+            {
+                Debug.Log(enemy.name + " ha muerto.");
+            }
+
         }
     }
 }
